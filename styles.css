@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000000;
+}
+
+/* Контейнер для телевизора */
+.tv-container {
+    position: relative;
+    width: 1280px; /* Ширина изображения телевизора */
+    height: 720px; /* Высота изображения телевизора */
+}
+
+/* Изображение телевизора */
+.tv-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Игровое поле внутри экрана телевизора */
+#game-area {
+    position: absolute;
+    top: 12%; /* Позиционируем игровое поле внутри экрана */
+    left: 19%;
+    width: 47%; /* Ширина игрового поля */
+    height: 68%; /* Высота игрового поля */
+    background-color: rgba(0, 0, 0, 0.8); /* Полупрозрачный чёрный фон */
+    border: 2px solid #000000;
+    overflow: hidden;
+}
+
+#paddle {
+    position: absolute;
+    width: 100px;
+    height: 20px;
+    background-color: #00f;
+    border-radius: 10px;
+    bottom: 10px;
+}
+
+.ball {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.block {
+    position: absolute;
+    background-color: #0f0;
+    border-radius: 5px;
+}
+
+#score {
+    position: absolute;
+    top: 10px; /* Перемещаем вверх */
+    left: 20px;
+    font-size: 24px;
+    color: #fff;
+}
+
+#timer {
+    position: absolute;
+    top: 10px; /* Перемещаем вверх */
+    right: 20px;
+    font-size: 24px;
+    color: #fff;
+}
+
+#start-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px 30px;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: #110a0a;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+}
+
+#win-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 32px;
+    color: #00ff00;
+    text-shadow: 2px 2px 4px #000000;
+    display: none; /* Скрыто по умолчанию */
+}
+
+#win-message.visible {
+    display: block; /* Показываем при победе */
+}
+
+@media only screen and (max-width: 768px) {
+    .tv-container {
+        width: 100%; /* Ширина контейнера на всю ширину экрана */
+        height: 100vh; /* Высота контейнера на всю высоту экрана */
+    }
+
+    #game-area {
+        top: 10%; /* Позиционирование игрового поля */
+        left: 5%;
+        width: 90%; /* Ширина игрового поля */
+        height: 80%; /* Высота игрового поля */
+    }
+
+    #paddle {
+        width: 80px; /* Уменьшение ширины платформы */
+        height: 15px; /* Уменьшение высоты платформы */
+        bottom: 60px; /* Поднимаем платформу выше */
+    }
+
+    .ball {
+        width: 15px; /* Уменьшение размера шарика */
+        height: 15px;
+    }
+
+    .block {
+        width: 30px; /* Уменьшение ширины блоков */
+        height: 15px; /* Уменьшение высоты блоков */
+    }
+
+    #score, #timer {
+        font-size: 18px; /* Уменьшение размера шрифта */
+    }
+
+    #start-button {
+        font-size: 20px; /* Уменьшение размера шрифта кнопки */
+        padding: 10px 20px; /* Уменьшение отступов кнопки */
+    }
+}
