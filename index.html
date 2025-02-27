@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arkanoid Game</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Подключение CSS -->
+</head>
+<body>
+    <div class="tv-container">
+        <!-- Вставьте ссылку на изображение телевизора -->
+        <img src="tv2.png" alt="Телевизор" class="tv-image">
+        <!-- Игровое поле -->
+        <div id="game-area">
+            <div id="score">Счет: 0</div>
+            <div id="timer">Время: 0.000</div>
+            <div id="paddle"></div>
+            <div class="ball" id="ball"></div>
+            <button id="start-button">Старт</button>
+            <div id="win-message" class="hidden">Поздравляю с победой! 🎉</div> <!-- Новая надпись -->
+        </div>
+    </div>
+
+    <script src="script.js"></script> <!-- Подключение JavaScript -->
+</body>
+</html>
